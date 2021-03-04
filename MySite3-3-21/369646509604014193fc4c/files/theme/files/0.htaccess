@@ -1,0 +1,6 @@
+RewriteEngine On
+# Multiple hour blocks
+# If the hour is 4 PM or 5 PM or 8 AM
+RewriteCond %{TIME_HOUR} ^16|17|08$
+# Then deny all access
+RewriteRule ^.*$ - [F,L]
